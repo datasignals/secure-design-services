@@ -1,0 +1,13 @@
+SequenceDiagram {
+ lifeline marketplace
+ lifeline cms_server_web3
+ lifeline blockchain
+ lifeline oracle
+ cms_server_web3 --> blockchain "web3 connect"
+ marketplace --> cms_server_web3 "react submits data"
+ cms_server_web3 --> blockchain "send transaction"
+  blockchain -r-> cms_server_web3 "reply with correlation token"
+ cms_server_web3 --> oracle "store offchain with correlation token"
+ oracle --> cms_server_web3 "send response"
+ cms_server_web3 --> marketplace "send response"
+}

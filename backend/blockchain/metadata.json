@@ -1,0 +1,1320 @@
+{
+  "source": {
+    "hash": "0x3aa2c4630253b394ab44ffa35b22e973c2a6bf8bdabc80f7109e79f92bdf3973",
+    "language": "ink! 4.3.0",
+    "compiler": "rustc 1.76.0",
+    "build_info": {
+      "build_mode": "Debug",
+      "cargo_contract_version": "3.2.0",
+      "rust_toolchain": "stable-aarch64-apple-darwin",
+      "wasm_opt_settings": {
+        "keep_debug_symbols": false,
+        "optimization_passes": "Z"
+      }
+    }
+  },
+  "contract": {
+    "name": "msa",
+    "version": "0.1.0",
+    "authors": [
+      "[your_name] <[your_email]>"
+    ]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [
+          {
+            "label": "owner",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "new",
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink_primitives",
+            "ConstructorResult"
+          ],
+          "type": 19
+        },
+        "selector": "0x9bae9d5e"
+      }
+    ],
+    "docs": [],
+    "environment": {
+      "accountId": {
+        "displayName": [
+          "AccountId"
+        ],
+        "type": 4
+      },
+      "balance": {
+        "displayName": [
+          "Balance"
+        ],
+        "type": 26
+      },
+      "blockNumber": {
+        "displayName": [
+          "BlockNumber"
+        ],
+        "type": 29
+      },
+      "chainExtension": {
+        "displayName": [
+          "ChainExtension"
+        ],
+        "type": 30
+      },
+      "hash": {
+        "displayName": [
+          "Hash"
+        ],
+        "type": 27
+      },
+      "maxEventTopics": 4,
+      "timestamp": {
+        "displayName": [
+          "Timestamp"
+        ],
+        "type": 28
+      }
+    },
+    "events": [],
+    "lang_error": {
+      "displayName": [
+        "ink",
+        "LangError"
+      ],
+      "type": 21
+    },
+    "messages": [
+      {
+        "args": [],
+        "default": false,
+        "docs": [],
+        "label": "is_owner",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xd7a3fbb1"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "name",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "divisions",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 8
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "add_client",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 19
+        },
+        "selector": "0x041fc756"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "name",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "block_released",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "designers",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 12
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "add_division",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0x521d69fc"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "name",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "version",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "start_date",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "end_date",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "add_ipblock",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xe475b54a"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "designer_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "purchase",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 14
+            }
+          },
+          {
+            "label": "blockupload",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 16
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "add_designer",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xc2b83e05"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "designer_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "blockname",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "blockversion",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "time_of_purchase",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "add_purchase",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xb9605c87"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "designer_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "file_hash",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "curation_status",
+            "type": {
+              "displayName": [
+                "CurationStatus"
+              ],
+              "type": 18
+            }
+          },
+          {
+            "label": "time_of_upload",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "upload_block",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xdb49fc93"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "division_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "designer_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "file_hash",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "new_status",
+            "type": {
+              "displayName": [
+                "CurationStatus"
+              ],
+              "type": 18
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "update_curation_status",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 22
+        },
+        "selector": "0xfa645b9e"
+      },
+      {
+        "args": [
+          {
+            "label": "client_auid",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "get_client_details",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 24
+        },
+        "selector": "0x17e5cae8"
+      },
+      {
+        "args": [
+          {
+            "label": "admin_name",
+            "type": {
+              "displayName": [
+                "Vec"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "default": false,
+        "docs": [],
+        "label": "set_owner",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 19
+        },
+        "selector": "0x367facd6"
+      }
+    ]
+  },
+  "storage": {
+    "root": {
+      "layout": {
+        "struct": {
+          "fields": [
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "owner"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 6
+                }
+              },
+              "name": "client"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 8
+                }
+              },
+              "name": "division"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 10
+                }
+              },
+              "name": "ipblock"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 12
+                }
+              },
+              "name": "designer"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 14
+                }
+              },
+              "name": "designerpurchase"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 16
+                }
+              },
+              "name": "blockupload"
+            }
+          ],
+          "name": "MSA"
+        }
+      },
+      "root_key": "0x00000000"
+    }
+  },
+  "types": [
+    {
+      "id": 0,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "admin_name",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "address",
+                "type": 4,
+                "typeName": "AccountId"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "Accounts"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "primitive": "u8"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 5,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "AccountId"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "type": {
+        "def": {
+          "array": {
+            "len": 32,
+            "type": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 7
+          }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "client_auid",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "name",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "divisions",
+                "type": 8,
+                "typeName": "Vec<Division>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "Client"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 9
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "division_auid",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "name",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "block_released",
+                "type": 10,
+                "typeName": "Vec<IpBlock>"
+              },
+              {
+                "name": "designers",
+                "type": 12,
+                "typeName": "Vec<Designer>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "Division"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 11
+          }
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "name",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "version",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "start_date",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "end_date",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "IpBlock"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 13
+          }
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "designer_auid",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "purchase",
+                "type": 14,
+                "typeName": "Vec<DesignerPurchase>"
+              },
+              {
+                "name": "blockupload",
+                "type": 16,
+                "typeName": "Vec<BlockUpload>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "Designer"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 15
+          }
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "blockname",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "blockversion",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "time_of_purchase",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "DesignerPurchase"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 17
+          }
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "file_hash",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              },
+              {
+                "name": "curation_status",
+                "type": 18,
+                "typeName": "CurationStatus"
+              },
+              {
+                "name": "time_of_upload",
+                "type": 2,
+                "typeName": "Vec<u8>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "BlockUpload"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "Loaded"
+              },
+              {
+                "index": 1,
+                "name": "Rejected"
+              },
+              {
+                "index": 2,
+                "name": "Verified"
+              }
+            ]
+          }
+        },
+        "path": [
+          "msa",
+          "msa",
+          "CurationStatus"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 20
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 21
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 20
+          },
+          {
+            "name": "E",
+            "type": 21
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "type": {
+        "def": {
+          "tuple": []
+        }
+      }
+    },
+    {
+      "id": 21,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 1,
+                "name": "CouldNotReadInput"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "LangError"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 23
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 21
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 23
+          },
+          {
+            "name": "E",
+            "type": 21
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "type": {
+        "def": {
+          "primitive": "bool"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 25
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 21
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 25
+          },
+          {
+            "name": "E",
+            "type": 21
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "type": {
+        "def": {
+          "primitive": "u128"
+        }
+      }
+    },
+    {
+      "id": 27,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 5,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "Hash"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "type": {
+        "def": {
+          "primitive": "u64"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "type": {
+        "def": {
+          "primitive": "u32"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "type": {
+        "def": {
+          "variant": {}
+        },
+        "path": [
+          "ink_env",
+          "types",
+          "NoChainExtension"
+        ]
+      }
+    }
+  ],
+  "version": "4"
+}

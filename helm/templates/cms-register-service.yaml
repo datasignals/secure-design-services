@@ -1,0 +1,16 @@
+# frontend-service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.registration.deployment.name }}-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ .Values.registration.deployment.containerPort }}
+      targetPort: {{ .Values.registration.deployment.containerPort }}
+  selector:
+    app: cms-registration
+  type: ClusterIP

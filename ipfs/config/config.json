@@ -1,0 +1,9 @@
+{
+    "encryption": {
+        "encrypt_key": ""
+    },
+    "storage": {
+        "login_id": "",
+        "space_did": ""
+    }
+}

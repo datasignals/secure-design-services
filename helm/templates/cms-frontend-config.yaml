@@ -1,0 +1,9 @@
+# Server Config Secret
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.secrets.frontendConfig.name }}
+  namespace: {{ .Release.Namespace }}
+type: Opaque
+data:
+  config.json: {{ .Files.Get .Values.secrets.frontendConfig.filePath | b64enc | quote }}

@@ -1,0 +1,50 @@
+{
+  "name": "ps-consent-management-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Milosz Jakubanis",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "copy-resources": "rm -rf out && mkdir out && cp -r config out/config && cp -r blockchain out/blockchain && cp -r version out/version",
+    "start": "yarn copy-resources && nodemon --ext ts --exec 'tsc && node out/nodeEntrypoint.js || exit 1'",
+    "deploy": "node out/nodeEntrypoint.js"
+  },
+  "dependencies": {
+    "@keycloak/keycloak-admin-client": "17.0.1",
+    "@polkadot/api": "^10.10.1",
+    "@polkadot/api-contract": "^10.10.1",
+    "@polkadot/keyring": "^12.5.1",
+    "@polkadot/types": "^10.10.1",
+    "@types/express": "^4.17.17",
+    "@types/image-size": "^0.8.0",
+    "@types/mongodb": "^4.0.7",
+    "@types/multer": "^1.4.9",
+    "@types/node": "^18.15.11",
+    "@types/node-cache": "^4.2.5",
+    "@types/nodemailer": "^6.4.7",
+    "@web3-storage/w3up-client": "^11.2.1",
+    "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "image-size": "^1.0.2",
+    "lerna": "^6.5.1",
+    "lerna-dockerize": "^1.0.7",
+    "mongodb": "^6.1.0",
+    "multer": "^1.4.5-lts.1",
+    "node": "^19.8.1",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^6.9.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1"
+  },
+  "overrides": {
+    "@types/mime": "3.0.4"
+    }
+}

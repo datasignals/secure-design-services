@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/ico" sizes="16x16"/>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css" media="all">
+    <!-- Provided CSS -->
+    <link id="cn-css" rel="stylesheet" href="%PUBLIC_URL%/css/cn-styles.css" media="all">
+    <title>CONSENT MANAGEMENT INTERFACE </title>
+
+    <base href="/">
+</head>
+
+<body>
+<div id="cn-wrapper">
+
+</div>
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="%PUBLIC_URL%/js/jquery-3.4.1.slim.min.js"></script>
+<script src="%PUBLIC_URL%/js/popper.min.js"></script>
+<script src="%PUBLIC_URL%/js/bootstrap.min.js"></script>
+<script>
+    // Change the selector if needed
+    var $table = $('table.scroll'),
+        $bodyCells = $table.find('tbody tr:first').children(),
+        colWidth;
+
+    // Adjust the width of thead cells when window resizes
+    $(window).resize(function () {
+        // Get the tbody columns width array
+        colWidth = $bodyCells.map(function () {
+            return $(this).width();
+        }).get();
+
+        // Set the width of thead columns
+        $table.find('thead tr').children().each(function (i, v) {
+            $(v).width(colWidth[i]);
+        });
+    }).resize(); // Trigger resize handler
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "contract": {
+    "client": "Client A","contract-auid": "AUID123",
+    "divisions": [
+      {
+        "division-auid": "DivisionAUID1","name": "Division 1",
+        "blocksreleased": [{"ipblock": 1},{"ipblock": 2}]
+      },
+      {
+        "division-auid": "DivisionAUID2","name": "Division 2",
+        "blocksreleased": [{"ipblock": 3}]
+      }
+    ],
+    "designers": [
+      {
+        "designer-auid": "DesignerAUID1","name": "Designer 1","division": "Division 1",
+        "purchases": [{"ipblock": 1}]
+      },
+      {
+        "designer-auid": "DesignerAUID2","name": "Designer 2","division": "Division 2",
+        "purchases": [{"ipblock": 3}]
+      }
+    ]
+  }
+}

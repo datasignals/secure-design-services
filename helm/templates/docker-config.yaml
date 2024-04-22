@@ -1,0 +1,9 @@
+# Docker Lockular Secret
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.secrets.dockerLockular.name }}
+  namespace: {{ .Release.Namespace }}
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: {{ .Files.Get .Values.secrets.dockerLockular.filePath | b64enc | quote }}

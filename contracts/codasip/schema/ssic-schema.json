@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "contract": {
+      "type": "object",
+      "properties": {
+        "client" : {"type": "string"},
+        "contract-auid" : {"type": "string"},
+        "divisions" : {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "division-auid" : {"type": "string"},
+              "name": {"type": "string"},
+              "blocksreleased": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ipblock": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": ["ipblock"]
+                }
+              }
+            }
+          }          
+        },
+        "designers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "designer-auid" : {"type": "string"},
+              "name": {"type": "string"},
+              "division": {"type": "string"},
+              "purchases": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ipblock": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": ["ipblock"]
+                }
+              }
+            },
+            "required": ["name", "purchases"]
+          }
+        }
+      }
+    }
+  }
+}

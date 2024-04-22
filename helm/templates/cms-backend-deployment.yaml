@@ -1,0 +1,46 @@
+# deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.backend.deployment.name }}
+  namespace: {{ .Values.backend.deployment.namespace }}
+spec:
+  replicas: {{ .Values.backend.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: cms-backend
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cms-backend
+        cluster-autoscaler.kubernetes.io/safe-to-evict: 'false'
+    spec:
+      volumes:
+        - name: server-config
+          secret:
+            secretName: {{ .Values.secrets.serverConfig.name }}
+        - name: metadata-config
+          secret:
+            secretName: {{ .Values.secrets.metadataConfig.name }}
+        - name: docker-lockular
+          secret:
+            secretName: {{ .Values.secrets.dockerLockular.name }}
+      containers:
+        - name: cms-backend
+          image: '{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}'
+          ports:
+            - name: http
+              containerPort: {{ .Values.backend.deployment.containerPort }}
+              protocol: TCP
+          volumeMounts:
+            - name: server-config
+              mountPath: {{ .Values.secrets.serverConfig.mountPath }}
+              subPath: {{ .Values.secrets.serverConfig.subPath }}
+            - name: metadata-config
+              mountPath: {{ .Values.secrets.metadataConfig.mountPath }}
+              subPath: {{ .Values.secrets.metadataConfig.subPath }}
+      securityContext: {}
+      imagePullSecrets:
+        - name: {{ .Values.secrets.dockerLockular.name }}

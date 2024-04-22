@@ -1,0 +1,24 @@
+{
+    "blockchain": {
+        "metadata": "",
+        "provider": "wss://ws.test.azero.dev",
+        "contractAddress": "",
+        "keyring": ""
+    },
+    "kafkaListener" :{
+        "brokers":"",
+        "clientId":"",
+        "groupId":"",
+        "topic":""
+    },
+    "mongo": {
+        "connection": "",
+        "ssl":false,
+        "collections": {
+          "filesystem": {
+            "connectionDb": "fs_oracle",
+            "collection": "FileSystem"
+          }
+        }
+      }
+}

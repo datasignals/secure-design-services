@@ -1,0 +1,10 @@
+# Metadata Config Secret
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.secrets.metadataConfig.name }}
+  namespace: {{ .Release.Namespace }}
+type: Opaque
+data:
+  metadata.json: {{ .Files.Get .Values.secrets.metadataConfig.filePath | b64enc | quote }}

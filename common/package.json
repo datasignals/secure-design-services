@@ -1,0 +1,12 @@
+{
+  "name": "common",
+  "version": "0.0.1",
+  "description": "Common data between frontend and backend",
+  "main": "index.js",
+  "author": "Milosz Jakubanis",
+  "license": "MIT",
+  "dependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.2"
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71">
+  <g id="ic_Publish" transform="translate(-1255 -376)">
+    <g id="Ellipse_239" data-name="Ellipse 239" transform="translate(1255 376)" fill="none" stroke="#e4e9df" stroke-width="1">
+      <circle cx="35.5" cy="35.5" r="35.5" stroke="none"/>
+      <circle cx="35.5" cy="35.5" r="35" fill="none"/>
+    </g>
+    <path id="check" d="M16.979,101.643.732,85.4a2.5,2.5,0,0,1,0-3.535l3.535-3.535a2.5,2.5,0,0,1,3.535,0L18.746,89.272,42.187,65.83a2.5,2.5,0,0,1,3.535,0l3.535,3.535a2.5,2.5,0,0,1,0,3.535L20.513,101.643a2.5,2.5,0,0,1-3.535,0Z" transform="translate(1265.505 327.763)" fill="#8dc73f"/>
+  </g>
+</svg>

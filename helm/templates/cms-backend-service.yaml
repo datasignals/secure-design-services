@@ -1,0 +1,16 @@
+# backend-service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.backend.deployment.name }}-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ .Values.backend.deployment.containerPort }}
+      targetPort: {{ .Values.backend.deployment.containerPort }}
+  selector:
+    app: cms-backend
+  type: ClusterIP

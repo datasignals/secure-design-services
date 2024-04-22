@@ -1,0 +1,43 @@
+# frontend-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.frontend.deployment.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.frontend.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: cms-frontend
+  template:
+    metadata:
+      labels:
+        app: cms-frontend
+        cluster-autoscaler.kubernetes.io/safe-to-evict: 'false'
+    spec:
+      volumes:
+        - name: frontend-config
+          secret:
+            secretName: {{ .Values.secrets.frontendConfig.name }}    
+        - name: keycloak-config
+          secret:
+            secretName: {{ .Values.secrets.keycloakConfig.name }}           
+      containers:
+        - name: cms-frontend
+          image: '{{ .Values.frontend.image.repository }}:{{ .Values.frontend.image.tag }}'
+          ports:
+            - name: http
+              containerPort: {{ .Values.frontend.deployment.containerPort }}
+              protocol: TCP
+          volumeMounts:
+            - name: frontend-config
+              mountPath: {{ .Values.secrets.frontendConfig.mountPath }}
+              subPath: {{ .Values.secrets.frontendConfig.subPath }} 
+
+          resources: {}
+      restartPolicy: Always
+      securityContext: {}
+      imagePullSecrets:
+        - name: {{ .Values.secrets.dockerLockular.name }}
+      schedulerName: {{ .Values.frontend.deployment.schedulerName }}

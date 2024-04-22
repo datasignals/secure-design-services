@@ -1,0 +1,71 @@
+# values.yaml
+
+backend:
+  deployment:
+    name: cms-backend
+    replicas: 1
+    containerPort: 3001
+    schedulerName: default-scheduler
+
+  image:
+    repository: datasignals/pscms-backend
+    tag: 0.0.62
+
+
+frontend:
+  deployment:
+    name: cms-frontend
+    replicas: 1
+    containerPort: 3000
+    schedulerName: default-scheduler
+
+  image:
+    repository: datasignals/pscms-frontend
+    tag: 0.0.61  
+
+registration: 
+   deployment:
+     name: cms-registration
+     replicas: 1
+     containerPort: 3000
+     schedulerName: default-scheduler
+
+   image: 
+      repository: datasignals/pscms-registration
+      tag: 0.0.61 
+
+secrets:
+  serverConfig:
+    name: cms-server-config
+    filePath: Secrets/config.json
+    mountPath: /app/build/config/config.json
+    subPath: config.json
+
+  frontendConfig: 
+     name:  cms-frontend-config
+     filePath:  Secrets/frontendconfig.json
+     mountPath: /app/src/config.json
+     subPath: config.json
+
+
+  keycloakConfig: 
+     name:  cms-frontend-keycloak-config
+     filePath:  Secrets/keycloak.json
+     mountPath: /app/public/keycloak.json
+     subPath: keycloak.json
+       
+
+  metadataConfig:
+    name: cms-metadata-config
+    filePath: Secrets/metadata.json
+    mountPath: /app/blockchain/metadata.json
+    subPath: metadata.json
+
+  dockerLockular:
+    name: docker-lockular
+    filePath: Secrets/dockerconfig.json
+
+ingress: 
+   frontendhost:  cms.studioin.cloud
+   backendhost:   cms-backend.studioin.cloud
+   registrationhost:  chipbuzz.studioin.cloud

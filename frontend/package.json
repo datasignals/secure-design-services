@@ -1,0 +1,76 @@
+{
+  "name": "ps-consent-management-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@keycloak/keycloak-admin-client": "17.0.1",
+    "@pdftron/webviewer": "^8.11.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/bootstrap": "^5.2.6",
+    "@types/express-session": "^1.17.6",
+    "@types/jest": "^29.4.0",
+    "@types/jquery": "^3.5.27",
+    "@types/localforage": "^0.0.34",
+    "@types/match-sorter": "^6.0.0",
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.27",
+    "@types/react-bootstrap": "^0.32.32",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-owl-carousel": "^2.3.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/sass": "^1.43.1",
+    "@types/sort-by": "^1.2.0",
+    "axios": "^1.5.1",
+    "bootstrap": "^5.2.3",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "common": "*",
+    "crypto-browserify": "^3.12.0",
+    "express-session": "^1.17.3",
+    "keycloak-js": "^21.0.1",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-bootstrap-daterangepicker": "^8.0.0",
+    "react-dom": "^18.2.0",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "sass": "^1.58.3",
+    "serve": "^14.2.1",
+    "sort-by": "^1.2.0",
+    "typescript": "^4.9.5",
+    "util": "^0.12.5",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "deploy": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/safe-json-stringify": "^1.1.2"
+  }
+}

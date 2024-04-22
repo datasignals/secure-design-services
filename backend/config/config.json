@@ -1,0 +1,69 @@
+{
+  "smpServer": {
+    "host": "smtp.gmail.com",
+    "port": "",
+    "secure": false,
+    "auth": {
+      "user": "",
+      "pass": ""
+    },
+    "emailAddress": ""
+  },
+  "keycloak": {
+    "connection": {
+      "baseUrl": "",
+      "realmName": "master"
+    },
+    "realmName": "contractmanagement",
+    "credentials": {
+      "username": "",
+      "password": "",
+      "grantType": "",
+      "clientId": "",
+      "clientSecret": ""
+    }
+  },
+  "mongo": {
+    "connection": "",
+    "collections": {
+      "msa": {
+        "connectionDb": "cms_oracle",
+        "collection": "MSAs"
+      },
+      "assets": {
+        "connectionDb": "CompanyData",
+        "collection": "Assets"
+      }
+    }
+  },
+  "indie": {
+    "name": "CHIPNET",
+    "group": "Indie"
+  },
+  "artifactory": {
+    "address": "",
+    "credentials": ""
+  },
+  "blockchain": {
+    "metadata": "",
+    "provider": "wss://ws.test.azero.dev",
+    "contractAddress": "",
+    "keyring": ""
+  },
+  "accounts": {
+    "jamie": "",
+    "mocka": "",
+    "alice": "",
+    "bob": "",
+    "charlie": "",
+    "mark": ""
+  },
+  "license" : {
+    "address": "",
+    "apiToken": ""
+  },
+  "dropdownOptions": {
+    "availableDivisions": ["NA", "EU", "APAC", "LATAM", "MEA", "INTL", "EM"],
+    "availableRoles": ["designer"]
+  }
+}

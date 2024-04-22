@@ -1,0 +1,16 @@
+# frontend-service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.frontend.deployment.name }}-service
+  namespace: {{ .Release.Namespace }}
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ .Values.frontend.deployment.containerPort }}
+      targetPort: {{ .Values.frontend.deployment.containerPort }}
+  selector:
+    app: cms-frontend
+  type: ClusterIP

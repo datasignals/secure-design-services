@@ -1,0 +1,20 @@
+{
+  "name": "ps-consent-management",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "registration",
+    "backend",
+    "common"
+  ],
+  "devDependencies": {
+    "lerna": "^6.5.1",
+    "lerna-dockerize": "^1.0.7"
+  },
+  "scripts": {
+    "lerna-dockerize": "lerna-dockerize"
+  },
+  "dependencies": {
+    "react-bootstrap-daterangepicker": "^8.0.0"
+  }
+}

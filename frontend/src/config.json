@@ -1,0 +1,7 @@
+{
+  "backendAddress": "http://localhost:3001",
+  "licenseKey": "",
+  "contractAddress": "",
+  "kafkslistenerAddress": "http://localhost:3005",
+  "explorerLink" : ""
+}

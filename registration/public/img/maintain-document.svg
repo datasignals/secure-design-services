@@ -1,0 +1,15 @@
+<svg id="ic_MaintainDocuments" xmlns="http://www.w3.org/2000/svg" width="105.779" height="105.779" viewBox="0 0 105.779 105.779">
+  <g id="Group_250" data-name="Group 250">
+    <g id="Rectangle_733" data-name="Rectangle 733" transform="translate(105.779 105.779) rotate(180)" fill="#4e4e4e" stroke="#7a7a7a" stroke-width="1">
+      <rect width="105.779" height="105.779" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="104.779" height="104.779" rx="14.5" fill="none"/>
+    </g>
+  </g>
+  <path id="Subtraction_10" data-name="Subtraction 10" d="M43.451,64.356H6.207A6.128,6.128,0,0,1,0,58.324V6.033A6.129,6.129,0,0,1,6.207,0H32.6a6.336,6.336,0,0,1,4.383,1.773l10.85,10.545a5.943,5.943,0,0,1,1.824,4.263V58.324A6.128,6.128,0,0,1,43.451,64.356ZM33.629,7.034h0V16.6h9.84Z" transform="translate(28.061 22.565)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <rect id="Rectangle_1587" data-name="Rectangle 1587" width="18.558" height="4.639" rx="2" transform="translate(33.404 35.26)" fill="#fff"/>
+  <line id="Line_146" data-name="Line 146" x2="36.188" transform="translate(33.404 59.849)" fill="none" stroke="#fff" stroke-width="1"/>
+  <line id="Line_150" data-name="Line 150" x2="26.909" transform="translate(33.404 54.745)" fill="none" stroke="#fff" stroke-width="2"/>
+  <line id="Line_147" data-name="Line 147" x2="36.188" transform="translate(33.404 64.952)" fill="none" stroke="#fff" stroke-width="1"/>
+  <line id="Line_148" data-name="Line 148" x2="36.188" transform="translate(33.404 70.056)" fill="none" stroke="#fff" stroke-width="1"/>
+  <line id="Line_149" data-name="Line 149" x2="36.188" transform="translate(33.404 75.159)" fill="none" stroke="#fff" stroke-width="1"/>
+</svg>

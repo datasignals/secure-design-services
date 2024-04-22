@@ -1,0 +1,21 @@
+{
+    "name": "codesip",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "private": "true",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@polkadot/api": "^10.10.1",
+        "@polkadot/api-contract": "^10.10.1",
+        "@polkadot/keyring": "^12.5.1",
+        "@polkadot/util": "^12.5.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "fs": "^0.0.1-security"
+    }
+}
